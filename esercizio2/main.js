@@ -3,8 +3,13 @@
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
 // Genero il numero dell'utente e del computer
-let userNumber = Math.floor(Math.random() * 6) + 1,
+let userNumber = Math.floor(Math.random() * 6) + 1;
+let computerNumber = Math.floor(Math.random() * 6) + 1;
+
+// Controllo che i numeri non siano uguali
+while (userNumber === computerNumber) {
     computerNumber = Math.floor(Math.random() * 6) + 1;
+}
 
 // Informo l'utente dei numeri generati
 alert(
@@ -15,5 +20,5 @@ alert(
 alert(
     userNumber > computerNumber
         ? `HAI VINTO!🎉 \n(☞ﾟヮﾟ)☞`
-        : `Hai perso!😑 \nಥ_ಥ`
+        : `Hai perso!😥 \nಥ_ಥ`
 );
